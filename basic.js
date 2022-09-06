@@ -48,13 +48,30 @@ cat.isSick = false;
 console.log(cat.name)
 console.log("Is fed: " + cat.isFed())
 
+const randomStuff = ['Peter', 7, 'Marianne', true, 'Helle', 8];
+
+for (let item of randomStuff) {
+    console.log(item + " is a " + typeof item);
+}
+
+
 
 // function subtract(a, b) {
 //     return a-b;
 // }
 // console.log(a);
 
+for(let i=0; i < 5; i++) {
+    for(let j=0; j < 5; j++) {
+
+    }
+}
+
 const names = ['Christian', 'Lukas', 'Martin', 'Samuel', 'Reka'];
+names.forEach((name) => {
+    console.log(name);
+});
+
 const index = names.indexOf('Martin');
 console.log("index: " + index);
 
