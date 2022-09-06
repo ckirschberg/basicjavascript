@@ -1,4 +1,5 @@
 import { Cat } from "./cat.js";
+import { Student } from "./student.js";
 
 let myname = 'Christian';
 myname = 'Jens';
@@ -22,6 +23,17 @@ console.log(cat2.miau());
 
 // console.log('Result is: ' + add(2,5));
 
+function person(firstname, lastname) {
+    console.log(firstname + " " + lastname);
+    return firstname + " " + lastname;
+}
+const fullname = person('Victor', 'Christensen');
+console.log(fullname);
+
+
+
+
+
 let cat = { 
     name: 'Charlie', 
     breed: 'Maine Coon', 
@@ -36,6 +48,37 @@ cat.isSick = false;
 console.log(cat.name)
 console.log("Is fed: " + cat.isFed())
 
+
+// function subtract(a, b) {
+//     return a-b;
+// }
+// console.log(a);
+
+const names = ['Christian', 'Lukas', 'Martin', 'Samuel', 'Reka'];
+const index = names.indexOf('Martin');
+console.log("index: " + index);
+
+const p1 = {firstname: 'Christian', lastname: 'Kirschberg'};
+const people = [
+    {firstname:'Peter', lastname: 'Jensen'}, 
+    {firstname: 'Helle', lastname: 'Petersen'},
+    {firstname: 'Marianne', lastname: 'Hansen'},
+    {firstname: 'Jens', lastname: 'Christensen'},
+    {firstname: 'Christian', lastname: 'Kirschberg'},
+]
+
+function whoHasMyName(personToFind, people) {
+    return people.filter((p) => p.firstname === personToFind.firstname);
+}
+console.log("found person" + whoHasMyName(p1, people)[0].lastname);
+
+
+
+
+let obj = { };
+obj.brand = 'Lyreco';
+console.log(obj.brand);
+
 let calculator = {
     name: 'Christian Kirschberg',
     calculateDistance: function (speed, time) {
@@ -48,4 +91,5 @@ let calculator = {
        return a*b;
    }
 }
-console.log(calculator.areaRectangle(3,5));
+const area = calculator.areaRectangle(3,5);
+console.log(area);
